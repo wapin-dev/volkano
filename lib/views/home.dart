@@ -218,7 +218,7 @@ class _HomeState extends State<Home> {
             ),
 
             Padding(
-              padding: const EdgeInsets.only(left: 40, top: 5, right: 40),
+              padding: const EdgeInsets.only(left: 25, top: 5, right: 40),
               child: SizedBox(
                 height: 50,
                 width: double.infinity,
@@ -250,92 +250,41 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-
-            // SizedBox(
-            //   height: 200,
-            //   width: 180,
-            //   child: Stack(
-            //     children: [
-            //       Padding(
-            //         padding: const EdgeInsets.only(top: 5, left: 5, right: 5),
-            //         child: Container(
-            //           height: 200,
-            //           width: double.infinity,
-            //           alignment: Alignment.center,
-            //           // color: Colors.red,
-            //           child: ClipRRect(
-            //             borderRadius: BorderRadius.circular(25),
-            //             child: Image.asset(
-            //               'assets/images/volcano.webp',
-            //               height: 250,
-            //               width: double.infinity,
-            //               fit: BoxFit.cover,
-            //             ),
-            //           ),
-            //         ),
-            //       ),
-            //       Positioned(
-            //         bottom: 0,
-            //         left: 3,
-            //         child: Padding(
-            //           padding: const EdgeInsets.all(13),
-            //           child: Column(
-            //             mainAxisAlignment: MainAxisAlignment.end,
-            //             crossAxisAlignment: CrossAxisAlignment.start,
-            //             children: [
-            //               SizedBox(
-            //                 child: Text(
-            //                   'Mount Rinjani',
-            //                   style: TextStyle(
-            //                     fontSize: 20,
-            //                     fontWeight: FontWeight.bold,
-            //                     color: Colors.white,
-            //                   ),
-            //                 ),
-            //               ),
-            //               Row(
-            //                 mainAxisAlignment: MainAxisAlignment.start,
-            //                 crossAxisAlignment: CrossAxisAlignment.center,
-            //                 children: [
-            //                   SizedBox(
-            //                     child: Icon(
-            //                       Icons.location_on,
-            //                       color: Colors.white,
-            //                       size: 15,
-            //                     ),
-            //                   ),
-            //                   SizedBox(
-            //                     child: Text(
-            //                       'Mount Rinjani',
-            //                       style: TextStyle(
-            //                         fontSize: 14,
-            //                         fontWeight: FontWeight.bold,
-            //                         color: Colors.white,
-            //                       ),
-            //                     ),
-            //                   ),
-            //                 ],
-            //               ),
-            //             ],
-            //           ),
-            //         ),
-            //       ),
-            //     ],
-            //   ),
-            // ),
             SizedBox(
-              height: 300,
+              height: 200,
               width: double.infinity,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                physics: const BouncingScrollPhysics(),
-                itemCount: 10,
-                itemBuilder:
-                    (context, index) => VolcanoSwipe(
-                      title: 'Test',
-                      subtitle: 'test',
-                      image: 'assets/images/volcano.webp',
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
+                  itemCount: 10,
+                  itemBuilder:
+                      (context, index) => VolcanoSwipe(
+                        title: 'Test',
+                        subtitle: 'test',
+                        image: 'assets/images/volcano.webp',
+                      ),
+                ),
+              ),
+            ),
+            SizedBox(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20, top: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Recommand",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
                     ),
+                  ],
+                ),
               ),
             ),
           ],
