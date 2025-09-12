@@ -38,7 +38,7 @@ class VolcanoSwipe extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 0,
+            bottom: 100,
             left: 3,
             child: Padding(
               padding: const EdgeInsets.all(13),
