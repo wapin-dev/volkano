@@ -325,16 +325,17 @@ class _HomeState extends State<Home> {
             // ),
             SizedBox(
               height: 300,
+              width: double.infinity,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
+                physics: const BouncingScrollPhysics(),
                 itemCount: 10,
-                itemBuilder: (context, index) {
-                  return VolcanoSwipe(
-                    title: 'MON foudji',
-                    image: 'assets/images/volcano.webp',
-                    subtitle: "test",
-                  );
-                },
+                itemBuilder:
+                    (context, index) => VolcanoSwipe(
+                      title: 'Test',
+                      subtitle: 'test',
+                      image: 'assets/images/volcano.webp',
+                    ),
               ),
             ),
           ],
